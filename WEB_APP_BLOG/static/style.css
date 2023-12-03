@@ -15,9 +15,9 @@ body {
   
   .site-header .navbar-nav .reg{
     font-size: 15px;
-    padding: 8px 16px;
+    padding: 6px 14px;
     border: 2px solid #F0ECE5;
-    border-radius: 15px;
+    border-radius: 6px;
     color: #F0ECE5;
     text-decoration: none;
     transition: background-color 0.3s;
@@ -34,7 +34,16 @@ body {
     border: 1px solid #dddddd;
     border-radius: 3px;
     margin-bottom: 20px;
+    height: 400px; /* Adjust the height as needed */
+    overflow: auto; /* Enables a scrollbar if content overflows */
+    
+  }
 
+  ::-webkit-scrollbar {
+    width: 5px; /* For Chrome, Safari, and Edge */
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent; /* For Chrome, Safari, and Edge */
   }
   
   .article-title {

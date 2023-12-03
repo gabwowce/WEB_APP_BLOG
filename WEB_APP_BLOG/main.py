@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash, redirect
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from forms import RegistrationForms, LoginForm
 import mysql.connector
@@ -42,6 +42,9 @@ def about():
 @app.route('/register', methods=["GET", "POST"])
 def register():
   form = RegistrationForms()
+  if form.validate_on_submit():
+    flash(f"Account created for {form.username.data}!", category="success")
+    return redirect(url_for("home"))
   return render_template("register.html", title="Register", form=form)
 
 @app.route('/login')
