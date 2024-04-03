@@ -1,5 +1,4 @@
 # WEB_APP_BLOG
-README for Your Flask Blogging Web Application
 Overview
 This web application is a basic blogging platform where users can register, log in, and write blog posts. It is built using the Flask framework in Python and follows the standard structure for Flask applications with user authentication and CRUD (Create, Read, Update, Delete) functionality for blog posts.
 
